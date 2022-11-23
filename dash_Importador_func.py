@@ -1,0 +1,2 @@
+def dash_Importador_func():
+    return """select distinct nombre_importador, count(id) as cantidad_solicitudes from importador inner join solicitud on solicitud.id_importador = importador.id group by(id,nombre_importador) having count(id)>80"""
